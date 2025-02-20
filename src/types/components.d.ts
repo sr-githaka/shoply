@@ -17,6 +17,13 @@ declare global {
                 name: string;
             }
         }
+
+        namespace NavItem {
+            interface Props {
+                href: string;
+                name: string;
+            }
+        }
     }
 
     namespace Layout {
