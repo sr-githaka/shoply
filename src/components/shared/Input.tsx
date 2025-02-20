@@ -1,3 +1,6 @@
+import { workSans } from '@fonts/dynamic';
+import { InputStyles } from '@styles/shared';
+
 export default function Input({
     label,
     id,
@@ -6,13 +9,14 @@ export default function Input({
     value,
 }: Shared.Input.Props) {
     return (
-        <div>
-            <label htmlFor={id}>{label}</label>
+        <div className={InputStyles.Input}>
+            {label && <label htmlFor={id}>{label}</label>}
             <input
                 type={type}
                 id={id}
                 placeholder={placeholder}
                 value={value}
+                className={workSans.className}
             />
         </div>
     );
