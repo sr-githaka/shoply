@@ -1,7 +1,17 @@
 declare global {
-    export namespace Shared {}
-    export namespace Layout {}
-    export namespace Views {}
+    namespace Shared {
+        namespace Icon {
+            interface Props {
+                name: string;
+                description: string;
+                width: number;
+                height: number;
+                style: string;
+            }
+        }
+    }
+    namespace Layout {}
+    namespace Views {}
 }
 
 export {};
