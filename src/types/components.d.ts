@@ -84,7 +84,13 @@ declare global {
         }
     }
 
-    namespace Views {}
+    namespace View {
+        namespace Authentication {
+            interface Props {
+                type: 'Login' | 'Register' | 'Reset';
+            }
+        }
+    }
 }
 
 export {};

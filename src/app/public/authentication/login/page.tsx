@@ -19,7 +19,7 @@ export default function Login() {
                 <Button href='/' name='Landing' />
             </Header>
             <Main>
-                <Authentication />
+                <Authentication type='Login' />
             </Main>
         </>
     );
