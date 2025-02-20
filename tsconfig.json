@@ -27,6 +27,10 @@
             "@styles/view": ["./src/styles/components/view"],
             "@fonts/static": ["./src/fonts/static"],
             "@fonts/dynamic": ["./src/fonts/dynamic"],
+            "@core/hooks": ["./src/core/hooks"],
+            "@core/middleware": ["./src/core/middleware"],
+            "@core/handlers": ["./src/core/handlers"],
+            "@core/utils": ["./src/core/utils"],
             "@/*": ["./src/*"]
         }
     },
