@@ -1,8 +1,8 @@
 import { ViewStyles } from '@styles/layout';
 
-export default function View({ children, id }: Layout.View.Props) {
+export default function View({ children, id, styles }: Layout.View.Props) {
     return (
-        <section className={ViewStyles.View} id={id}>
+        <section className={[ViewStyles.View, styles].join(' ')} id={id}>
             {children}
         </section>
     );

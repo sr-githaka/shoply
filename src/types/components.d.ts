@@ -67,6 +67,7 @@ declare global {
             interface Props {
                 id: string;
                 children: ReactNode;
+                styles?: string;
             }
         }
 
