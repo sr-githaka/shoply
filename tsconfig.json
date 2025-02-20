@@ -25,6 +25,9 @@
             "@styles/layout": ["./src/styles/components/layout"],
             "@styles/shared": ["./src/styles/components/shared"],
             "@styles/view": ["./src/styles/components/view"],
+            "@types/layout": ["./src/types/components/layout.types"],
+            "@types/shared": ["./src/types/components/shared.types"],
+            "@types/view": ["./src/types/components/view.types"],
             "@/*": ["./src/*"]
         }
     },
