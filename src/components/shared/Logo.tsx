@@ -6,8 +6,8 @@ export default function Logo() {
         <Icon
             name='logo.svg'
             description='POS logo'
-            width={24}
-            height={24}
+            width={28}
+            height={28}
             style={LogoStyles.Logo}
         />
     );
