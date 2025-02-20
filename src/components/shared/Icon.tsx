@@ -10,7 +10,7 @@ export default function Icon({
 }: Shared.Icon.Props) {
     return (
         <Image
-            src={name}
+            src={`/assets/icons/dark/${name}`}
             alt={description}
             width={width}
             height={height}
