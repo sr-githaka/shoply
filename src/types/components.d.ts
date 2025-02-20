@@ -32,6 +32,22 @@ declare global {
                 name: string;
             }
         }
+
+        namespace Form {
+            interface Props {
+                children: ReactNode;
+            }
+        }
+
+        namespace Input {
+            interface Props {
+                label?: string;
+                id?: string;
+                type: 'text' | 'email' | 'password';
+                placeholder?: string;
+                value?: string;
+            }
+        }
     }
 
     namespace Layout {
