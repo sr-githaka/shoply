@@ -24,6 +24,13 @@ declare global {
                 name: string;
             }
         }
+
+        namespace Button {
+            interface Props {
+                href: string;
+                name: string;
+            }
+        }
     }
 
     namespace Layout {
