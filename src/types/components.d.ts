@@ -8,7 +8,7 @@ declare global {
                 description: string;
                 width: number;
                 height: number;
-                style: string;
+                style?: string;
             }
         }
 
