@@ -43,7 +43,7 @@ declare global {
             interface Props {
                 label?: string;
                 id?: string;
-                type: 'text' | 'email' | 'password';
+                type: 'text' | 'email' | 'password' | 'submit';
                 placeholder?: string;
                 value?: string;
             }
@@ -66,6 +66,18 @@ declare global {
         namespace View {
             interface Props {
                 id: string;
+                children: ReactNode;
+            }
+        }
+
+        namespace Main {
+            interface Props {
+                children: ReactNode;
+            }
+        }
+
+        namespace Container {
+            interface Props {
                 children: ReactNode;
             }
         }
