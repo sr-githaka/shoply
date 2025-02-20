@@ -22,6 +22,8 @@
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
+        flex-grow: inherit;
+        height: inherit;
     }
 
     .Body {
