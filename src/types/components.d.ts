@@ -62,6 +62,13 @@ declare global {
                 children: ReactNode;
             }
         }
+
+        namespace View {
+            interface Props {
+                id: string;
+                children: ReactNode;
+            }
+        }
     }
 
     namespace Views {}
