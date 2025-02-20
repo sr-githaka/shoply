@@ -12,7 +12,7 @@ export default function Nav({ children }: Layout.Nav.Props) {
             <div className={NavStyles.Small}>
                 <div className={NavStyles.Head} onClick={toggleTrigger}>
                     <Icon
-                        name='cancel.svg'
+                        name={trigger ? 'cancel.svg' : 'menu.svg'}
                         description='Navigation icon'
                         width={28}
                         height={16}
