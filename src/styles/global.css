@@ -1,13 +1,14 @@
 :root {
     --hairline-color: rgba(0, 0, 0, 0.1);
-    --background-color: #f3f4ef;
+    --primary-color: #f3f4ef;
+    --secondary-color: black;
 }
 
 * {
     padding: 0px;
     margin: 0px;
     font-size: 16px;
-    color: black;
+    color: var(--secondary-color);
 }
 
 body {
@@ -16,7 +17,7 @@ body {
     align-items: flex-start;
     justify-content: center;
     overflow-y: auto;
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

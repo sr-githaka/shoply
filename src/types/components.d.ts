@@ -22,6 +22,7 @@ declare global {
             interface Props {
                 href: string;
                 name: string;
+                active?: boolean;
             }
         }
 

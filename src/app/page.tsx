@@ -1,12 +1,13 @@
 import { Header, Main } from '@components/layout';
-import { NavItem } from '@components/shared';
+import { Button, NavItem } from '@components/shared';
 
 export default function Landing() {
     return (
         <>
             <Header>
-                <NavItem href='/' name='Landing' />
+                <NavItem href='/' name='Landing' active />
                 <NavItem href='/docs' name='Docs' />
+                <Button href='/authentication/login' name='Account' />
             </Header>
             <Main />
         </>
