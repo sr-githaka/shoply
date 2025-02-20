@@ -25,6 +25,8 @@
             "@styles/layout": ["./src/styles/components/layout"],
             "@styles/shared": ["./src/styles/components/shared"],
             "@styles/view": ["./src/styles/components/view"],
+            "@fonts/static": ["./src/fonts/static"],
+            "@fonts/dynamic": ["./src/fonts/dynamic"],
             "@/*": ["./src/*"]
         }
     },
