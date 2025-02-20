@@ -19,7 +19,9 @@
             }
         ],
         "paths": {
-            "@components": ["./src/components"],
+            "@components/layout": ["./src/components/layout"],
+            "@components/shared": ["./src/components/shared"],
+            "@components/view": ["./src/components/view"],
             "@/*": ["./src/*"]
         }
     },
