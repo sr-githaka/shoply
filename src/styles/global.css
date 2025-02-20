@@ -1,3 +1,8 @@
+:root {
+    --hairline-color: rgba(0, 0, 0, 0.1);
+    --background-color: #f3f4ef;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -11,6 +16,7 @@ body {
     align-items: flex-start;
     justify-content: center;
     overflow-y: auto;
+    background-color: var(--background-color);
 }
 
 @media (max-width: 768px) {
