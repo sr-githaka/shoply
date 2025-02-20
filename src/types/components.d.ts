@@ -9,8 +9,16 @@ declare global {
                 style: string;
             }
         }
+
+        namespace Brand {
+            interface Props {
+                name: string;
+            }
+        }
     }
+
     namespace Layout {}
+
     namespace Views {}
 }
 
