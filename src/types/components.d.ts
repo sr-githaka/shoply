@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 declare global {
     namespace Shared {
         namespace Icon {
@@ -17,7 +19,19 @@ declare global {
         }
     }
 
-    namespace Layout {}
+    namespace Layout {
+        namespace Nav {
+            interface Props {
+                children: ReactNode;
+            }
+        }
+
+        namespace Header {
+            interface Props {
+                children: ReactNode;
+            }
+        }
+    }
 
     namespace Views {}
 }
