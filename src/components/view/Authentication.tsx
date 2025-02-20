@@ -1,10 +1,11 @@
 import { View } from '@components/layout';
-import { Form, Input } from '@components/shared';
+import { Form, Input, Logo } from '@components/shared';
 import { AuthenticationStyles } from '@styles/view';
 
 export default function Authentication() {
     return (
         <View id='authentication' styles={AuthenticationStyles.Authentication}>
+            <Logo />
             <Form>
                 <Input
                     label='Email'
