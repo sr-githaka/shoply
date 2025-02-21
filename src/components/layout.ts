@@ -4,3 +4,5 @@ export { default as Footer } from './layout/Footer';
 export { default as Container } from './layout/Container';
 export { default as View } from './layout/View';
 export { default as Nav } from './layout/Nav';
+export { default as Public } from './layout/Public';
+export { default as Private } from './layout/Private';

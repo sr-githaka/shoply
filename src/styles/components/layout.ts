@@ -4,3 +4,5 @@ export { default as ViewStyles } from './layout/View.module.css';
 export { default as ContainerStyles } from './layout/Container.module.css';
 export { default as FooterStyles } from './layout/Footer.module.css';
 export { default as NavStyles } from './layout/Nav.module.css';
+export { default as PublicStyles } from './layout/Public.module.css';
+export { default as PrivateStyles } from './layout/Private.module.css';
