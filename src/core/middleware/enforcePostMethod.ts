@@ -1,4 +1,6 @@
-export default function enforcePostMethod(request: Request) {
+import { NextRequest } from 'next/server';
+
+export default function enforcePostMethod(request: NextRequest) {
     if (request.method !== 'POST') {
         return {
             ok: false,

@@ -1,9 +1,14 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { enforceJsonFormat, enforcePostMethod } from '@core/middleware';
+import {
+    enforceJsonFormat,
+    enforceLoginPolicy,
+    enforcePostMethod,
+} from '@core/middleware';
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
     const pathName = request.nextUrl.pathname;
+    const jsonBody = await request.json();
 
     if (pathName === '/api/public/authentication/login') {
         // enforcePostMethod
@@ -13,9 +18,15 @@ export function middleware(request: NextRequest) {
         }
 
         // enforceJsonFormat
-        const isJsonFormat = enforceJsonFormat(request);
+        const isJsonFormat = await enforceJsonFormat(request, jsonBody);
         if (!isJsonFormat.ok) {
             return NextResponse.json(isJsonFormat, { status: 415 });
+        }
+
+        // enforceLoginPolicy
+        const isLoginPolicy = await enforceLoginPolicy(jsonBody);
+        if (!isLoginPolicy.ok) {
+            return NextResponse.json(isLoginPolicy, { status: 415 });
         }
     }
 

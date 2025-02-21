@@ -1,4 +1,10 @@
-export default function enforceJsonFormat(request: Request) {
+import { NextRequest } from 'next/server';
+import { json } from 'stream/consumers';
+
+export default async function enforceJsonFormat(
+    request: NextRequest,
+    jsonBody: any
+) {
     const contentType = request.headers.get('content-type') || '';
 
     if (!contentType.includes('application/json')) {
@@ -12,5 +18,17 @@ export default function enforceJsonFormat(request: Request) {
         } as API.Response;
     }
 
-    return { ok: true };
+    try {
+        await jsonBody;
+        return { ok: true };
+    } catch {
+        return {
+            ok: false,
+            info: 'Invalid JSON',
+            error: {
+                origin: { type: 'middleware', method: 'enforceJsonFormat' },
+                info: 'Malformed JSON body.',
+            },
+        } as API.Response;
+    }
 }
