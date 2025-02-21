@@ -1,19 +1,23 @@
 import { Breadcrumb, Header, Main } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 
-export default function Dashboard() {
+export default function Store() {
     return (
         <>
             <Header>
-                <NavItem href='/private/dashboard' name='Dashboard' active />
+                <NavItem
+                    href='/private/analytics/overview'
+                    name='Analytics'
+                    active
+                />
                 <NavItem href='/private/store' name='Store' />
                 <NavItem href='/private/panel' name='Panel' />
                 <Button href='/authentication/login' name='Logout' />
             </Header>
-            <Breadcrumb>
-                <NavItem href='/private/dashboard' name='Dashboard' active />
-                <NavItem href='/private/store' name='Analytics' />
-                <NavItem href='/private/panel' name='Reports' />
+            <Breadcrumb path='Analytics / Store'>
+                <NavItem href='/private/analytics/overview' name='Overview' />
+                <NavItem href='/private/analytics/store' name='Store' active />
+                <NavItem href='/private/analytics/panel' name='Panel' />
             </Breadcrumb>
             <Main>
                 <></>

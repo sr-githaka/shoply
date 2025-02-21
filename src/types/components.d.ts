@@ -87,6 +87,7 @@ declare global {
         namespace Breadcrumb {
             interface Props {
                 children: ReactNode;
+                path: string;
             }
         }
     }

@@ -4,7 +4,10 @@ import { useTrigger } from '@core/hooks';
 import { Icon } from '@components/shared';
 import { BreadcrumbStyles } from '@styles/layout';
 
-export default function Breadcrumb({ children }: Layout.Breadcrumb.Props) {
+export default function Breadcrumb({
+    children,
+    path,
+}: Layout.Breadcrumb.Props) {
     const { trigger, toggleTrigger } = useTrigger();
     return (
         <div className={[BreadcrumbStyles.Breadcrumb, 'layout'].join(' ')}>
@@ -16,7 +19,7 @@ export default function Breadcrumb({ children }: Layout.Breadcrumb.Props) {
                     height={9}
                 />
             </div>
-            <p>Dashboard / </p>
+            <p>{path}</p>
             {trigger ? (
                 <div className={BreadcrumbStyles.Body}>{children}</div>
             ) : (
