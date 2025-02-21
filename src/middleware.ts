@@ -34,7 +34,7 @@ export async function middleware(request: NextRequest) {
         }
 
         // enforceJsonFormat
-        const isJsonFormat = await enforceJsonFormat(request, jsonBody);
+        const isJsonFormat = await enforceJsonFormat(request);
         if (!isJsonFormat.ok) {
             return NextResponse.json(isJsonFormat, { status: 415 });
         }
@@ -42,7 +42,7 @@ export async function middleware(request: NextRequest) {
         // enforceLoginPolicy
         const isLoginPolicy = await enforceLoginPolicy(jsonBody);
         if (!isLoginPolicy.ok) {
-            return NextResponse.json(isLoginPolicy, { status: 415 });
+            return NextResponse.json(isLoginPolicy, { status: 400 });
         }
     }
 

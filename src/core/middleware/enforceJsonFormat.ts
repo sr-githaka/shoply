@@ -1,10 +1,7 @@
 import { NextRequest } from 'next/server';
 import { json } from 'stream/consumers';
 
-export default async function enforceJsonFormat(
-    request: NextRequest,
-    jsonBody: any
-) {
+export default async function enforceJsonFormat(request: NextRequest) {
     const contentType = request.headers.get('content-type') || '';
 
     if (!contentType.includes('application/json')) {
