@@ -9,34 +9,34 @@ import {
 export async function middleware(request: NextRequest) {
     const pathName = request.nextUrl.pathname;
 
-    let jsonBody;
-    try {
-        jsonBody = await request.json();
-    } catch {
-        return NextResponse.json(
-            {
-                ok: false,
-                info: 'Invalid JSON',
-                error: {
-                    origin: { type: 'middleware', method: 'middleware.ts' },
-                    info: 'Malformed JSON body.',
-                },
-            } as API.Response,
-            { status: 400 }
-        );
-    }
-
     if (pathName === '/api/public/authentication/login') {
-        // enforcePostMethod
-        const isPostMethod = enforcePostMethod(request);
-        if (!isPostMethod.ok) {
-            return NextResponse.json(isPostMethod, { status: 405 });
-        }
-
         // enforceJsonFormat
         const isJsonFormat = await enforceJsonFormat(request);
         if (!isJsonFormat.ok) {
             return NextResponse.json(isJsonFormat, { status: 415 });
+        }
+
+        let jsonBody;
+        try {
+            jsonBody = await request.json();
+        } catch {
+            return NextResponse.json(
+                {
+                    ok: false,
+                    info: 'Invalid JSON',
+                    error: {
+                        origin: { type: 'middleware', method: 'middleware.ts' },
+                        info: 'Malformed JSON body.',
+                    },
+                } as API.Response,
+                { status: 400 }
+            );
+        }
+
+        // enforcePostMethod
+        const isPostMethod = enforcePostMethod(request);
+        if (!isPostMethod.ok) {
+            return NextResponse.json(isPostMethod, { status: 405 });
         }
 
         // enforceLoginPolicy
