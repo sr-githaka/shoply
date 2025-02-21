@@ -1,4 +1,4 @@
-import { Header, Main } from '@components/layout';
+import { Breadcrumb, Header, Main } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 
 export default function Dashboard() {
@@ -10,6 +10,7 @@ export default function Dashboard() {
                 <NavItem href='/private/panel' name='Panel' />
                 <Button href='/authentication/login' name='Logout' />
             </Header>
+            <Breadcrumb />
             <Main>
                 <></>
             </Main>

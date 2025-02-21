@@ -1,3 +1,9 @@
+import { BreadcrumbStyles } from '@styles/layout';
+
 export default function Breadcrumb() {
-    return <div></div>;
+    return (
+        <div
+            className={[BreadcrumbStyles.Breadcrumb, 'layout'].join(' ')}
+        ></div>
+    );
 }
