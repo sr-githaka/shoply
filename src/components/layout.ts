@@ -6,3 +6,4 @@ export { default as View } from './layout/View';
 export { default as Nav } from './layout/Nav';
 export { default as Public } from './layout/Public';
 export { default as Private } from './layout/Private';
+export { default as Aside } from './layout/Aside';

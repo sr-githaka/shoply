@@ -6,3 +6,4 @@ export { default as FooterStyles } from './layout/Footer.module.css';
 export { default as NavStyles } from './layout/Nav.module.css';
 export { default as PublicStyles } from './layout/Public.module.css';
 export { default as PrivateStyles } from './layout/Private.module.css';
+export { default as AsideStyles } from './layout/Aside.module.css';
