@@ -82,6 +82,18 @@ declare global {
                 children: ReactNode;
             }
         }
+
+        namespace Public {
+            interface Props {
+                children: ReactNode;
+            }
+        }
+
+        namespace Private {
+            interface Props {
+                children: ReactNode;
+            }
+        }
     }
 
     namespace View {

@@ -1,5 +1,4 @@
 .Main {
-    height: calc(100dvh - 65px);
     display: flex;
     flex-direction: column;
     align-items: center;

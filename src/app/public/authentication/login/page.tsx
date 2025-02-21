@@ -1,10 +1,10 @@
-import { Header, Main } from '@components/layout';
+import { Header, Main, Public } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 import { Authentication } from '@components/view';
 
 export default function Login() {
     return (
-        <>
+        <Public>
             <Header>
                 <NavItem
                     href='/public/authentication/login'
@@ -21,6 +21,6 @@ export default function Login() {
             <Main>
                 <Authentication type='Login' />
             </Main>
-        </>
+        </Public>
     );
 }
