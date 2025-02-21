@@ -24,3 +24,20 @@
 .Button:hover {
     cursor: pointer;
 }
+
+.Body {
+    position: absolute;
+    top: calc(65px + 40px);
+    height: calc(100dvh - 65px - 64px - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 64px;
+    width: calc(256px - 64px);
+    border-right: 1px solid var(--hairline-color);
+    padding: 32px 0px;
+    padding-right: 32px;
+    overflow-y: auto;
+    background-color: var(--primary-color);
+}

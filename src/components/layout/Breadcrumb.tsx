@@ -1,7 +1,7 @@
 import { Icon } from '@components/shared';
 import { BreadcrumbStyles } from '@styles/layout';
 
-export default function Breadcrumb() {
+export default function Breadcrumb({ children }: Layout.Breadcrumb.Props) {
     return (
         <div className={[BreadcrumbStyles.Breadcrumb, 'layout'].join(' ')}>
             <div className={BreadcrumbStyles.Button}>
@@ -12,7 +12,8 @@ export default function Breadcrumb() {
                     height={9}
                 />
             </div>
-            <p>Dashboard / Analytics</p>
+            <p>Dashboard / </p>
+            <div className={BreadcrumbStyles.Body}>{children}</div>
         </div>
     );
 }

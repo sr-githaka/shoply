@@ -10,7 +10,11 @@ export default function Dashboard() {
                 <NavItem href='/private/panel' name='Panel' />
                 <Button href='/authentication/login' name='Logout' />
             </Header>
-            <Breadcrumb />
+            <Breadcrumb>
+                <NavItem href='/private/dashboard' name='Dashboard' active />
+                <NavItem href='/private/store' name='Analytics' />
+                <NavItem href='/private/panel' name='Reports' />
+            </Breadcrumb>
             <Main>
                 <></>
             </Main>

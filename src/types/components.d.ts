@@ -1,3 +1,4 @@
+import { Breadcrumb } from '@components/layout';
 import { ReactNode } from 'react';
 
 declare global {
@@ -83,13 +84,7 @@ declare global {
             }
         }
 
-        namespace Public {
-            interface Props {
-                children: ReactNode;
-            }
-        }
-
-        namespace Private {
+        namespace Breadcrumb {
             interface Props {
                 children: ReactNode;
             }
