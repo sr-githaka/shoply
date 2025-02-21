@@ -8,7 +8,23 @@ import {
 
 export async function middleware(request: NextRequest) {
     const pathName = request.nextUrl.pathname;
-    const jsonBody = await request.json();
+
+    let jsonBody;
+    try {
+        jsonBody = await request.json();
+    } catch {
+        return NextResponse.json(
+            {
+                ok: false,
+                info: 'Invalid JSON',
+                error: {
+                    origin: { type: 'middleware', method: 'middleware.ts' },
+                    info: 'Malformed JSON body.',
+                },
+            } as API.Response,
+            { status: 400 }
+        );
+    }
 
     if (pathName === '/api/public/authentication/login') {
         // enforcePostMethod

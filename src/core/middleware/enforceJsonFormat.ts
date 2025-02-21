@@ -18,17 +18,5 @@ export default async function enforceJsonFormat(
         } as API.Response;
     }
 
-    try {
-        await jsonBody;
-        return { ok: true };
-    } catch {
-        return {
-            ok: false,
-            info: 'Invalid JSON',
-            error: {
-                origin: { type: 'middleware', method: 'enforceJsonFormat' },
-                info: 'Malformed JSON body.',
-            },
-        } as API.Response;
-    }
+    return { ok: true };
 }
