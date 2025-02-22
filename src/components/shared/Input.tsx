@@ -7,6 +7,7 @@ export default function Input({
     type,
     placeholder,
     value,
+    method,
 }: Shared.Input.Props) {
     return (
         <div className={InputStyles.Input}>
@@ -17,6 +18,7 @@ export default function Input({
                 placeholder={placeholder}
                 value={value}
                 className={workSans.className}
+                onChange={method}
             />
         </div>
     );

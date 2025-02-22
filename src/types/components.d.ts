@@ -37,6 +37,7 @@ declare global {
         namespace Form {
             interface Props {
                 children: ReactNode;
+                method?: (event) => void;
             }
         }
 
@@ -47,6 +48,7 @@ declare global {
                 type: 'text' | 'email' | 'password' | 'submit';
                 placeholder?: string;
                 value?: string;
+                method?: (event) => void;
             }
         }
     }
