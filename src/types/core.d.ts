@@ -11,6 +11,12 @@ declare global {
                 password: string;
                 confirmPassword: string;
             }
+
+            export interface ResetCredentials {
+                email: string;
+                password: string;
+                confirmPassword: string;
+            }
         }
 
         export namespace Handlers {}

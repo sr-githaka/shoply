@@ -1,5 +1,3 @@
-import { NextRequest } from 'next/server';
-
 export default async function enforceLoginPolicy(jsonBody: any) {
     // Store the parsed JSON in a variable
     const loginCredentials: Core.Middleware.LoginCredentials = await jsonBody;
