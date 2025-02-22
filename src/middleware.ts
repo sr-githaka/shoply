@@ -12,6 +12,12 @@ export async function middleware(request: NextRequest) {
     const pathName = request.nextUrl.pathname;
 
     if (pathName === '/api/public/authentication/login') {
+        // enforcePostMethod
+        const isPostMethod = enforcePostMethod(request);
+        if (!isPostMethod.ok) {
+            return NextResponse.json(isPostMethod, { status: 405 });
+        }
+
         // enforceJsonFormat
         const isJsonFormat = await enforceJsonFormat(request);
         if (!isJsonFormat.ok) {
@@ -33,12 +39,6 @@ export async function middleware(request: NextRequest) {
                 } as API.Response,
                 { status: 400 }
             );
-        }
-
-        // enforcePostMethod
-        const isPostMethod = enforcePostMethod(request);
-        if (!isPostMethod.ok) {
-            return NextResponse.json(isPostMethod, { status: 405 });
         }
 
         // enforceLoginPolicy
@@ -49,6 +49,12 @@ export async function middleware(request: NextRequest) {
     }
 
     if (pathName === '/api/public/authentication/register') {
+        // enforcePostMethod
+        const isPostMethod = enforcePostMethod(request);
+        if (!isPostMethod.ok) {
+            return NextResponse.json(isPostMethod, { status: 405 });
+        }
+
         // enforceJsonFormat
         const isJsonFormat = await enforceJsonFormat(request);
         if (!isJsonFormat.ok) {
@@ -70,12 +76,6 @@ export async function middleware(request: NextRequest) {
                 } as API.Response,
                 { status: 400 }
             );
-        }
-
-        // enforcePostMethod
-        const isPostMethod = enforcePostMethod(request);
-        if (!isPostMethod.ok) {
-            return NextResponse.json(isPostMethod, { status: 405 });
         }
 
         // enforceRegisterPolicy
@@ -86,6 +86,12 @@ export async function middleware(request: NextRequest) {
     }
 
     if (pathName === '/api/public/authentication/reset') {
+        // enforcePostMethod
+        const isPostMethod = enforcePostMethod(request);
+        if (!isPostMethod.ok) {
+            return NextResponse.json(isPostMethod, { status: 405 });
+        }
+
         // enforceJsonFormat
         const isJsonFormat = await enforceJsonFormat(request);
         if (!isJsonFormat.ok) {
@@ -107,12 +113,6 @@ export async function middleware(request: NextRequest) {
                 } as API.Response,
                 { status: 400 }
             );
-        }
-
-        // enforcePostMethod
-        const isPostMethod = enforcePostMethod(request);
-        if (!isPostMethod.ok) {
-            return NextResponse.json(isPostMethod, { status: 405 });
         }
 
         // enforceResetPolicy

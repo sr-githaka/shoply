@@ -38,7 +38,7 @@ export async function POST(request: Request) {
         return NextResponse.json(
             {
                 ok: true,
-                info: 'Login successful',
+                info: 'Registration successful',
             } as API.Response,
             { status: 200 }
         );
