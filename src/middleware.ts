@@ -4,6 +4,7 @@ import {
     enforceJsonFormat,
     enforceLoginPolicy,
     enforcePostMethod,
+    enforceRegisterPolicy,
 } from '@core/middleware';
 
 export async function middleware(request: NextRequest) {
@@ -46,9 +47,49 @@ export async function middleware(request: NextRequest) {
         }
     }
 
+    if (pathName === '/api/public/authentication/register') {
+        // enforceJsonFormat
+        const isJsonFormat = await enforceJsonFormat(request);
+        if (!isJsonFormat.ok) {
+            return NextResponse.json(isJsonFormat, { status: 415 });
+        }
+
+        let jsonBody;
+        try {
+            jsonBody = await request.json();
+        } catch {
+            return NextResponse.json(
+                {
+                    ok: false,
+                    info: 'Invalid JSON',
+                    error: {
+                        origin: { type: 'middleware', method: 'middleware.ts' },
+                        info: 'Malformed JSON body.',
+                    },
+                } as API.Response,
+                { status: 400 }
+            );
+        }
+
+        // enforcePostMethod
+        const isPostMethod = enforcePostMethod(request);
+        if (!isPostMethod.ok) {
+            return NextResponse.json(isPostMethod, { status: 405 });
+        }
+
+        // enforceLoginPolicy
+        const isRegisterPolicy = await enforceRegisterPolicy(jsonBody);
+        if (!isRegisterPolicy.ok) {
+            return NextResponse.json(isRegisterPolicy, { status: 400 });
+        }
+    }
+
     return NextResponse.next();
 }
 
 export const config = {
-    matcher: ['/api/public/authentication/login'],
+    matcher: [
+        '/api/public/authentication/login',
+        '/api/public/authentication/register',
+    ],
 };
