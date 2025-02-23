@@ -2,6 +2,7 @@ import {
     enforceJsonFormat,
     enforceRegisterPolicy,
     enforceEmailPolicy,
+    createUser,
 } from '@core/handlers';
 import { NextResponse } from 'next/server';
 
@@ -43,6 +44,15 @@ export async function POST(request: Request) {
         const isEmailPolicy = await enforceEmailPolicy(jsonBody.email);
         if (!isEmailPolicy.ok) {
             return NextResponse.json(isEmailPolicy, { status: 400 });
+        }
+
+        // createUser
+        const isUserCreated = await createUser(
+            jsonBody.email,
+            jsonBody.password
+        );
+        if (!isUserCreated.ok) {
+            return NextResponse.json(isUserCreated, { status: 400 });
         }
 
         return NextResponse.json(
