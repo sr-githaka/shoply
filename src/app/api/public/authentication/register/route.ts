@@ -4,6 +4,7 @@ import {
     enforceEmailPolicy,
     createUser,
 } from '@core/handlers';
+import { hashString } from '@core/utils';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
@@ -46,13 +47,20 @@ export async function POST(request: Request) {
             return NextResponse.json(isEmailPolicy, { status: 400 });
         }
 
+        // hashPassword
+        const isPasswordHashed = await hashString(jsonBody.password);
+        if (!isPasswordHashed.ok) {
+            return NextResponse.json(isPasswordHashed, { status: 400 });
+        }
+
         // createUser
-        const isUserCreated = await createUser(
-            jsonBody.email,
-            jsonBody.password
-        );
-        if (!isUserCreated.ok) {
-            return NextResponse.json(isUserCreated, { status: 400 });
+        if (isPasswordHashed.ok && isPasswordHashed.data?.hash) {
+            const hash = isPasswordHashed.data?.hash;
+            const isUserCreated = await createUser(jsonBody.email, hash);
+
+            if (!isUserCreated.ok) {
+                return NextResponse.json(isUserCreated, { status: 400 });
+            }
         }
 
         return NextResponse.json(

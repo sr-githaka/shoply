@@ -10,7 +10,9 @@ declare global {
                 };
                 info: string;
             };
-            data?: T;
+            data?: {
+                hash?: string;
+            };
         }
     }
 }
