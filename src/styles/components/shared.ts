@@ -5,3 +5,4 @@ export { default as NavItemStyles } from './shared/NavItem.module.css';
 export { default as ButtonStyles } from './shared/Button.module.css';
 export { default as FormStyles } from './shared/Form.module.css';
 export { default as InputStyles } from './shared/Input.module.css';
+export { default as MessageStyles } from './shared/Message.module.css';

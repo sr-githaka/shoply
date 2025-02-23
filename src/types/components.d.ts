@@ -51,6 +51,12 @@ declare global {
                 method?: (event) => void;
             }
         }
+
+        namespace Message {
+            interface Props {
+                message: string;
+            }
+        }
     }
 
     namespace Layout {
