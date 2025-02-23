@@ -41,18 +41,21 @@ export default function Authentication({ type }: View.Authentication.Props) {
                             id='email'
                             type='email'
                             placeholder='your@email.here'
+                            method={handleChange}
                         />
                         <Input
                             label='Password'
                             id='password'
                             type='password'
                             placeholder='********'
+                            method={handleChange}
                         />
                         <Input
                             label='Confirm Password'
                             id='confirmPassword'
                             type='password'
                             placeholder='********'
+                            method={handleChange}
                         />
                     </>
                 )}
@@ -64,6 +67,7 @@ export default function Authentication({ type }: View.Authentication.Props) {
                             id='email'
                             type='email'
                             placeholder='your@email.here'
+                            method={handleChange}
                         />
                     </>
                 )}
