@@ -13,8 +13,9 @@ export default function Authentication({ type }: View.Authentication.Props) {
             styles={AuthenticationStyles.Authentication}
         >
             <Logo />
-            {message && <Message message={message} />}
+
             <Form method={handleSubmit}>
+                {message && <Message message={message} />}
                 {type === 'Login' && (
                     <>
                         <Input
