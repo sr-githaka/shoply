@@ -12,6 +12,7 @@ declare global {
             };
             data?: {
                 hash?: string;
+                user_id?: string;
             };
         }
     }

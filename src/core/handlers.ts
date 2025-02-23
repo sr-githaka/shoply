@@ -4,3 +4,4 @@ export { default as enforceRegisterPolicy } from './handlers/enforceRegisterPoli
 export { default as enforceResetPolicy } from './handlers/enforceResetPolicy';
 export { default as enforceEmailPolicy } from './handlers/enforceEmailPolicy';
 export { default as createUser } from './handlers/createUser';
+export { default as verifyUser } from './handlers/verifyUser';
