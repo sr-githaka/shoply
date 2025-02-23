@@ -2,6 +2,7 @@ import {
     enforceJsonFormat,
     enforceLoginPolicy,
     verifyUser,
+    createSession,
 } from '@core/handlers';
 import { NextResponse } from 'next/server';
 
@@ -47,6 +48,24 @@ export async function POST(request: Request) {
         if (!isUserVerified.ok) {
             return NextResponse.json(isUserVerified, { status: 400 });
         }
+
+        // createSession
+        let session_id;
+
+        if (isUserVerified.ok && isUserVerified.data?.user_id) {
+            const user_id = isUserVerified.data?.user_id;
+            const isSessionCreated = await createSession(user_id);
+
+            if (!isSessionCreated.ok) {
+                return NextResponse.json(isSessionCreated, { status: 400 });
+            }
+
+            if (isSessionCreated.ok && isSessionCreated.data?.session_id) {
+                session_id = isSessionCreated.data.session_id;
+            }
+        }
+
+        console.log(session_id);
 
         return NextResponse.json(
             {

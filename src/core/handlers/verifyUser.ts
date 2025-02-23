@@ -8,7 +8,7 @@ export default async function verifyUser(email: string, password: string) {
 
         const query = {
             name: 'verifyUser/fetch hash',
-            text: 'SELECT HASH FROM USERS WHERE email = $1',
+            text: 'SELECT * FROM USERS WHERE email = $1',
             values: [email],
         };
 
@@ -28,6 +28,8 @@ export default async function verifyUser(email: string, password: string) {
         }
 
         const hash = result.rows[0].hash;
+        const user_id = result.rows[0].id;
+
         const isValid = await compareHash(password, hash);
 
         if (!isValid) {
@@ -46,7 +48,7 @@ export default async function verifyUser(email: string, password: string) {
         return {
             ok: true,
             data: {
-                user_id: await result.rows[0].id,
+                user_id: await user_id,
             },
         } as API.Response;
     } catch {
