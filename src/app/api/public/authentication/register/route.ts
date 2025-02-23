@@ -1,4 +1,8 @@
-import { enforceJsonFormat, enforceRegisterPolicy } from '@core/handlers';
+import {
+    enforceJsonFormat,
+    enforceRegisterPolicy,
+    enforceEmailPolicy,
+} from '@core/handlers';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
@@ -33,6 +37,12 @@ export async function POST(request: Request) {
         const isRegisterPolicy = await enforceRegisterPolicy(jsonBody);
         if (!isRegisterPolicy.ok) {
             return NextResponse.json(isRegisterPolicy, { status: 400 });
+        }
+
+        // enforceEmailPolicy
+        const isEmailPolicy = await enforceEmailPolicy(jsonBody.email);
+        if (!isEmailPolicy.ok) {
+            return NextResponse.json(isEmailPolicy, { status: 400 });
         }
 
         return NextResponse.json(
