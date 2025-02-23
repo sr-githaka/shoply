@@ -5,7 +5,7 @@ import { Nav } from '@components/layout';
 export default function Header({ children }: Layout.Header.Props) {
     return (
         <header className={[HeaderStyles.Header, 'layout'].join(' ')}>
-            <Brand name='POS' />
+            <Brand name='Shoply' />
             <Nav>{children}</Nav>
         </header>
     );

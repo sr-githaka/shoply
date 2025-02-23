@@ -3,7 +3,7 @@ import { Button, NavItem } from '@components/shared';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'POS',
+    title: 'Shoply',
     description:
         'A fast and efficient online point-of-sale system for seamless transactions.',
 };
