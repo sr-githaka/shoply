@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers';
 import {
     enforceJsonFormat,
     enforceLoginPolicy,
@@ -41,19 +42,22 @@ export async function POST(request: Request) {
         }
 
         // verifyUser
+        let user_id;
+
         const isUserVerified = await verifyUser(
             jsonBody.email,
             jsonBody.password
         );
         if (!isUserVerified.ok) {
             return NextResponse.json(isUserVerified, { status: 400 });
+        } else if (isUserVerified.ok && isUserVerified.data?.user_id) {
+            user_id = isUserVerified.data?.user_id;
         }
 
         // createSession
         let session_id;
 
-        if (isUserVerified.ok && isUserVerified.data?.user_id) {
-            const user_id = isUserVerified.data?.user_id;
+        if (typeof user_id !== 'undefined') {
             const isSessionCreated = await createSession(user_id);
 
             if (!isSessionCreated.ok) {
@@ -62,6 +66,13 @@ export async function POST(request: Request) {
 
             if (isSessionCreated.ok && isSessionCreated.data?.session_id) {
                 session_id = isSessionCreated.data.session_id;
+                const cookieStore = await cookies();
+                cookieStore.set({
+                    name: 'session_id',
+                    value: session_id,
+                    httpOnly: true,
+                    path: '/',
+                });
             }
         }
 
