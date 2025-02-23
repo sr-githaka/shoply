@@ -2,37 +2,11 @@
 
 import { View } from '@components/layout';
 import { Form, Input, Logo } from '@components/shared';
+import { useAuthentication } from '@core/hooks';
 import { AuthenticationStyles } from '@styles/view';
-import { useState } from 'react';
 
 export default function Authentication({ type }: View.Authentication.Props) {
-    const [formData, setFormData] = useState({});
-    const [message, setMessage] = useState<string | null>(null);
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
-    };
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        setMessage(null);
-
-        try {
-            const response = await fetch(`/api/public/authentication/login`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
-            });
-
-            const result = await response.json();
-
-            if (!result.ok) {
-                setMessage(result.error.info);
-            }
-        } catch {
-            setMessage('eeeeeee');
-        } finally {
-        }
-    };
+    const { handleChange, handleSubmit, message } = useAuthentication({ type });
     return (
         <View
             id={type && type.toLowerCase()}
