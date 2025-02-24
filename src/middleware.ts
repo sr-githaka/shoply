@@ -122,6 +122,15 @@ export async function middleware(request: NextRequest) {
         }
     }
 
+    if (pathName.startsWith('/private')) {
+        const session_id = request.cookies.get('session_id');
+        if (typeof session_id === 'undefined') {
+            return NextResponse.redirect(
+                'http://localhost:3000/public/authentication/login'
+            );
+        }
+    }
+
     return NextResponse.next();
 }
 
@@ -130,5 +139,6 @@ export const config = {
         '/api/public/authentication/login',
         '/api/public/authentication/register',
         '/api/public/authentication/reset',
+        '/private/:path*',
     ],
 };
