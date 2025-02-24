@@ -125,6 +125,7 @@ export async function middleware(request: NextRequest) {
 
     if (pathName.startsWith('/private')) {
         const session_id = request.cookies.get('session_id');
+
         if (typeof session_id === 'undefined') {
             const cookieStore = await cookies();
             cookieStore.delete('user_id');
