@@ -21,6 +21,7 @@ export async function GET(request: Request) {
     const isSessionVerified = await verifySession(session_id.value);
     if (!isSessionVerified.ok) {
         cookieStore.delete('session_id');
+        cookieStore.delete('user_id');
         return NextResponse.json(isSessionVerified, { status: 400 });
     } else if (isSessionVerified.ok && isSessionVerified.data?.user_id) {
         user_id = isSessionVerified.data?.user_id;
