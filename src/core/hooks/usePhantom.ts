@@ -15,14 +15,18 @@ export default function usePhantom() {
                 const result = await response.json();
                 if (result.ok) {
                     setIsAuthenticated(true);
-                    router.push('/private/analytics/overview');
+                    router.push('/private/analytics/overview', {
+                        scroll: false,
+                    });
                 } else {
                     setIsAuthenticated(false);
-                    router.push('/public/authentication/login');
+                    router.push('/public/authentication/login', {
+                        scroll: false,
+                    });
                 }
             } catch {
                 setIsAuthenticated(false);
-                router.push('/public/authentication/login');
+                router.push('/public/authentication/login', { scroll: false });
             }
         };
 

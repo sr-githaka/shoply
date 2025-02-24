@@ -17,11 +17,13 @@ export default function useSentry() {
                     setIsAuthenticated(true);
                 } else {
                     setIsAuthenticated(false);
-                    router.push('/public/authentication/login');
+                    router.push('/public/authentication/login', {
+                        scroll: false,
+                    });
                 }
             } catch {
                 setIsAuthenticated(false);
-                router.push('/public/authentication/login');
+                router.push('/public/authentication/login', { scroll: false });
             }
         };
 
