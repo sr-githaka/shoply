@@ -6,3 +6,4 @@ export { default as View } from './layout/View';
 export { default as Nav } from './layout/Nav';
 export { default as Breadcrumb } from './layout/Breadcrumb';
 export { default as Sentry } from './layout/Sentry';
+export { default as Phantom } from './layout/Phantom';

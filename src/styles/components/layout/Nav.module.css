@@ -36,7 +36,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 64px;
-        width: calc(50dvw - 32px);
+        width: auto;
         border-left: 1px solid var(--hairline-color);
         padding: 32px;
         overflow-y: auto;

@@ -13,7 +13,7 @@ export default function Sentry({ children }: Layout.Sentry.Props) {
             ) : (
                 <div className={[SentryStyles.Sentry, 'layout'].join(' ')}>
                     <Logo />
-                    <p className={ocrA.className}>Authenticating</p>
+                    <p className={ocrA.className}>Shoply - Sentry</p>
                 </div>
             )}
         </>

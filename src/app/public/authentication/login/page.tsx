@@ -1,10 +1,10 @@
-import { Header, Main } from '@components/layout';
+import { Header, Main, Phantom } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 import { Authentication } from '@components/view';
 
 export default function Login() {
     return (
-        <>
+        <Phantom>
             <Header>
                 <NavItem
                     href='/public/authentication/login'
@@ -21,6 +21,6 @@ export default function Login() {
             <Main>
                 <Authentication type='Login' />
             </Main>
-        </>
+        </Phantom>
     );
 }

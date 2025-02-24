@@ -34,7 +34,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 64px;
-    width: calc(256px - 64px);
+    width: auto;
     border-right: 1px solid var(--hairline-color);
     padding: 32px 0px;
     padding-right: 32px;
