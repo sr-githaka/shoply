@@ -1,6 +1,6 @@
 :root {
     --hairline-color: rgba(0, 0, 0, 0.1);
-    --primary-color: #f3f4ef;
+    --primary-color: #f8f9fa;
     --secondary-color: black;
     --error-message-color: rgba(255, 0, 0, 0.1);
 }
