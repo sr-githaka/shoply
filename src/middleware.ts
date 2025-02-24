@@ -136,7 +136,6 @@ export async function middleware(request: NextRequest) {
 
     if (pathName.startsWith('/public')) {
         const cookieStore = await cookies();
-        cookieStore.delete('session_id');
         cookieStore.delete('user_id');
     }
 
