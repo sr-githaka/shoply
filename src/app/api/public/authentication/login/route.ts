@@ -76,8 +76,6 @@ export async function POST(request: Request) {
             }
         }
 
-        console.log(session_id);
-
         return NextResponse.json(
             {
                 ok: true,

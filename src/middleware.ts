@@ -134,6 +134,12 @@ export async function middleware(request: NextRequest) {
         }
     }
 
+    if (pathName.startsWith('/public')) {
+        const cookieStore = await cookies();
+        cookieStore.delete('session_id');
+        cookieStore.delete('user_id');
+    }
+
     return NextResponse.next();
 }
 
@@ -143,5 +149,6 @@ export const config = {
         '/api/public/authentication/register',
         '/api/public/authentication/reset',
         '/private/:path*',
+        '/public/:path*',
     ],
 };

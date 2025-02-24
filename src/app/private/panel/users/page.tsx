@@ -1,9 +1,9 @@
-import { Breadcrumb, Header, Main } from '@components/layout';
+import { Breadcrumb, Header, Main, Sentry } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 
 export default function Users() {
     return (
-        <>
+        <Sentry>
             <Header>
                 <NavItem
                     href='/private/analytics/overview'
@@ -26,6 +26,6 @@ export default function Users() {
             <Main>
                 <></>
             </Main>
-        </>
+        </Sentry>
     );
 }

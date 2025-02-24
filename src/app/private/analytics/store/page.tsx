@@ -1,9 +1,9 @@
-import { Breadcrumb, Header, Main } from '@components/layout';
+import { Breadcrumb, Header, Main, Sentry } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 
 export default function Store() {
     return (
-        <>
+        <Sentry>
             <Header>
                 <NavItem
                     href='/private/analytics/overview'
@@ -22,6 +22,6 @@ export default function Store() {
             <Main>
                 <></>
             </Main>
-        </>
+        </Sentry>
     );
 }
