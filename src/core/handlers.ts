@@ -6,3 +6,4 @@ export { default as enforceEmailPolicy } from './handlers/enforceEmailPolicy';
 export { default as createUser } from './handlers/createUser';
 export { default as verifyUser } from './handlers/verifyUser';
 export { default as createSession } from './handlers/createSession';
+export { default as verifySession } from './handlers/verifySession';
