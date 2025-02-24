@@ -7,6 +7,7 @@ import {
     enforceRegisterPolicy,
     enforceResetPolicy,
 } from '@core/middleware';
+import { cookies } from 'next/headers';
 
 export async function middleware(request: NextRequest) {
     const pathName = request.nextUrl.pathname;
@@ -125,6 +126,8 @@ export async function middleware(request: NextRequest) {
     if (pathName.startsWith('/private')) {
         const session_id = request.cookies.get('session_id');
         if (typeof session_id === 'undefined') {
+            const cookieStore = await cookies();
+            cookieStore.delete('user_id');
             return NextResponse.redirect(
                 'http://localhost:3000/public/authentication/login'
             );
