@@ -98,6 +98,12 @@ declare global {
                 path: string;
             }
         }
+
+        namespace Sentry {
+            interface Props {
+                children?: ReactNode;
+            }
+        }
     }
 
     namespace View {
