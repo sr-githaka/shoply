@@ -33,7 +33,9 @@ export default function useAuthentication({
                     if (!result.ok) {
                         setMessage(result.error.info);
                     } else {
-                        router.push('/private/analytics/overview');
+                        router.push('/private/analytics/overview', {
+                            scroll: false,
+                        });
                     }
                     break;
 
@@ -41,7 +43,9 @@ export default function useAuthentication({
                     if (!result.ok) {
                         setMessage(result.error.info);
                     } else {
-                        router.push('/public/authentication/login');
+                        router.push('/public/authentication/login', {
+                            scroll: false,
+                        });
                     }
                     break;
 
@@ -49,7 +53,9 @@ export default function useAuthentication({
                     if (!result.ok) {
                         setMessage(result.error.info);
                     } else {
-                        router.push('/public/authentication/login');
+                        router.push('/public/authentication/login', {
+                            scroll: false,
+                        });
                     }
                     break;
 
