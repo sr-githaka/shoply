@@ -1,3 +1,4 @@
+import AgGrid from '@/components/shared/AgGrid';
 import { Header, Main } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 import type { Metadata } from 'next';
@@ -17,7 +18,7 @@ export default function Landing() {
                 <Button href='/public/authentication/login' name='Account' />
             </Header>
             <Main>
-                <></>
+                <AgGrid />
             </Main>
         </>
     );
