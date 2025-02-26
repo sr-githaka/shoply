@@ -109,7 +109,7 @@ declare global {
     namespace View {
         namespace Authentication {
             interface Props {
-                type: 'Login' | 'Register' | 'Reset';
+                type: 'Login' | 'Register' | 'Reset' | 'Logout';
             }
         }
     }

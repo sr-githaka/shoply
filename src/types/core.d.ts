@@ -1,5 +1,3 @@
-import useAuthentication from '@/core/hooks/useAuthentication';
-
 declare global {
     export namespace Core {
         export namespace Middleware {
@@ -26,7 +24,7 @@ declare global {
         export namespace Hooks {
             namespace useAuthentication {
                 interface Props {
-                    type: 'Login' | 'Register' | 'Reset';
+                    type: 'Login' | 'Register' | 'Reset' | 'Logout';
                 }
             }
         }
