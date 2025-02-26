@@ -1,5 +1,6 @@
 import { Breadcrumb, Header, Main, Sentry } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
+import { Users as AllUsers } from '@components/view';
 
 export default function Users() {
     return (
@@ -20,7 +21,7 @@ export default function Users() {
                 <NavItem href='/private/analytics/panel' name='Account' />
             </Breadcrumb>
             <Main>
-                <></>
+                <AllUsers />
             </Main>
         </Sentry>
     );
