@@ -72,19 +72,6 @@ export default function Authentication({ type }: View.Authentication.Props) {
                         />
                     </>
                 )}
-
-                {type === 'Logout' && (
-                    <>
-                        <Input
-                            label='Password'
-                            id='password'
-                            type='password'
-                            placeholder='********'
-                            method={handleChange}
-                        />
-                    </>
-                )}
-
                 <Input type='submit' value={type} />
             </Form>
         </View>

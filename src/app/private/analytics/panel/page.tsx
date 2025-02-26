@@ -12,7 +12,7 @@ export default function Panel() {
                 />
                 <NavItem href='/private/store' name='Store' />
                 <NavItem href='/private/panel' name='Panel' />
-                <Button href='/authentication/login' name='Logout' />
+                <Button href='/' name='Logout' />
             </Header>
             <Breadcrumb path='Analytics / Panel'>
                 <NavItem href='/private/analytics/overview' name='Overview' />

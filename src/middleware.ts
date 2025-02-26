@@ -135,9 +135,18 @@ export async function middleware(request: NextRequest) {
         }
     }
 
-    if (pathName.startsWith('/public')) {
+    if (pathName.startsWith('/public/authentication')) {
         const cookieStore = await cookies();
         cookieStore.delete('user_id');
+    }
+
+    if (pathName === '/public/authentication/logout') {
+        const cookieStore = await cookies();
+        cookieStore.delete('session_id');
+        cookieStore.delete('user_id');
+        return NextResponse.redirect(
+            'http://localhost:3000/public/authentication/login'
+        );
     }
 
     return NextResponse.next();
@@ -150,5 +159,6 @@ export const config = {
         '/api/public/authentication/reset',
         '/private/:path*',
         '/public/:path*',
+        '/',
     ],
 };
