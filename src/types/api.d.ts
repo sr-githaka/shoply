@@ -14,6 +14,7 @@ declare global {
                 hash?: string;
                 user_id?: string;
                 session_id?: string;
+                users?: any;
             };
         }
     }
