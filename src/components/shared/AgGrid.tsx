@@ -2,11 +2,10 @@
 
 import { useState } from 'react';
 import { AgGridReact } from 'ag-grid-react';
-import { ModuleRegistry, ColDef } from 'ag-grid-community';
-import { ClientSideRowModelModule } from 'ag-grid-community';
+import { ColDef, AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 
-// Register required modules
-ModuleRegistry.registerModules([ClientSideRowModelModule]);
+// Register all Community features
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 export default function Home() {
     const [rowData] = useState([
@@ -16,7 +15,7 @@ export default function Home() {
     ]);
 
     const [columnDefs] = useState<ColDef[]>([
-        { field: 'make' },
+        { field: 'make', flex: 1, filter: true, floatingFilter: true },
         { field: 'model' },
         { field: 'price' },
     ]);
