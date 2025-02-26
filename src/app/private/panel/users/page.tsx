@@ -5,13 +5,9 @@ export default function Users() {
     return (
         <Sentry>
             <Header>
-                <NavItem
-                    href='/private/analytics/overview'
-                    name='Analytics'
-                    active
-                />
+                <NavItem href='/private/analytics/overview' name='Analytics' />
                 <NavItem href='/private/store' name='Store' />
-                <NavItem href='/private/panel' name='Panel' />
+                <NavItem href='/private/panel' name='Panel' active />
                 <Button href='/authentication/login' name='Logout' />
             </Header>
             <Breadcrumb path='Panel / Users'>
