@@ -6,4 +6,3 @@ export { default as Button } from './shared/Button';
 export { default as Form } from './shared/Form';
 export { default as Input } from './shared/Input';
 export { default as Message } from './shared/Message';
-export { default as AgGrid } from './shared/AgGrid';
