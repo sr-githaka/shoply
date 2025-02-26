@@ -7,6 +7,13 @@ import { ColDef, AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 // Register all Community features
 ModuleRegistry.registerModules([AllCommunityModule]);
 
+import { themeQuartz } from 'ag-grid-community';
+
+// to use myTheme in an application, pass it to the theme grid option
+const myTheme = themeQuartz.withParams({
+    fontFamily: 'inherit',
+});
+
 export default function Home() {
     const [rowData] = useState([
         { make: 'Toyota', model: 'Celica', price: 35000 },
@@ -15,14 +22,18 @@ export default function Home() {
     ]);
 
     const [columnDefs] = useState<ColDef[]>([
-        { field: 'make', flex: 1, filter: true, floatingFilter: true },
-        { field: 'model' },
-        { field: 'price' },
+        { field: 'make', flex: 1 },
+        { field: 'model', flex: 1 },
+        { field: 'price', flex: 1 },
     ]);
 
     return (
-        <div style={{ height: '100vh', width: '100%' }}>
-            <AgGridReact rowData={rowData} columnDefs={columnDefs} />
+        <div style={{ flexGrow: 1, width: '100%' }}>
+            <AgGridReact
+                rowData={rowData}
+                columnDefs={columnDefs}
+                theme={myTheme}
+            />
         </div>
     );
 }
