@@ -1,3 +1,11 @@
+# [1.0.0-development.3](https://github.com/sr-githaka/shoply/compare/v1.0.0-development.2...v1.0.0-development.3) (2025-03-06)
+
+
+### Features
+
+* **exports:** add export modules for components, lib, and styles ([62784be](https://github.com/sr-githaka/shoply/commit/62784be00e67341d2883538dbb7c9daa185c6d58))
+* **fonts:** add export modules and track font directories ([116236e](https://github.com/sr-githaka/shoply/commit/116236e65a4ee77db1b56f3e1b94f44dda5f01cd))
+
 # [1.0.0-development.2](https://github.com/sr-githaka/shoply/compare/v1.0.0-development.1...v1.0.0-development.2) (2025-03-06)
 
 
