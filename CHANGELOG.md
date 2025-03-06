@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/sr-githaka/shoply/compare/v1.3.0...v1.4.0) (2025-03-06)
+
+
+### Features
+
+* **shared:** add Icon component for consistent icon rendering ([7a6241a](https://github.com/sr-githaka/shoply/commit/7a6241af65ec948bce5e5da98506c3acdea1d5fa))
+* **shared:** add Logo component and extend Icon with style prop ([3f32714](https://github.com/sr-githaka/shoply/commit/3f3271451dbb1e6a9e68dda31c71f1ab2f11adb6))
+
 # [1.3.0](https://github.com/sr-githaka/shoply/compare/v1.2.0...v1.3.0) (2025-03-06)
 
 
