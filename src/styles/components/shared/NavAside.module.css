@@ -1,0 +1,28 @@
+.NavAside,
+.Head {
+    all: inherit;
+}
+
+.Body {
+    position: absolute;
+    top: 65px;
+    height: calc(100vh - 65px - 32px - 32px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 64px;
+    overflow-y: auto;
+    width: 192px;
+    border-left: 1px solid var(--highlight-color);
+    background-color: var(--background-color);
+}
+
+@media (min-width: 769px) {
+    .NavAside {
+        display: none;
+    }
+}
