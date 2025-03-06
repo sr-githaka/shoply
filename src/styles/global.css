@@ -1,0 +1,17 @@
+:root {
+    --text-color: black;
+    --background-color: white;
+    --accent-color: white;
+    --highlight-color: white;
+    --error-color: red;
+    --warning-color: orange;
+    --success-color: green;
+    --info-color: blue;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    color: var(--text-color);
+}
