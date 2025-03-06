@@ -6,7 +6,7 @@ export default function Brand({}: BrandTypes.Props) {
     return (
         <div className={BrandStyles.Brand}>
             <Logo />
-            <p>Volty</p>
+            <p>Shoply</p>
         </div>
     );
 }
