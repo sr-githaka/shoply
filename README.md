@@ -1,4 +1,4 @@
-# Shoply
+# Shoplyc
 
 **Cloud-Based POS System for SMEs**
 
