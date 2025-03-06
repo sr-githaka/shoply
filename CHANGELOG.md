@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/sr-githaka/shoply/compare/v1.2.0...v1.3.0) (2025-03-06)
+
+
+### Features
+
+* **fonts:** integrate dynamic and static fonts for layout ([cf3c7d4](https://github.com/sr-githaka/shoply/commit/cf3c7d47c0fc1875e9f741431cb1f578f2d5f846))
+* **layout:** add Container component for layout ([8a4c62d](https://github.com/sr-githaka/shoply/commit/8a4c62d95c1b12521c29ed2d35d3f942678830bd))
+* **layout:** add Footer component for layout ([044e3f5](https://github.com/sr-githaka/shoply/commit/044e3f5b0f2a80226f12d10582614bbb03bea2c6))
+
 # [1.2.0](https://github.com/sr-githaka/shoply/compare/v1.1.0...v1.2.0) (2025-03-06)
 
 
