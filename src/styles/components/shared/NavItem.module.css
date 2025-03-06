@@ -1,0 +1,13 @@
+.NavItem,
+.Active {
+    text-decoration: none;
+}
+
+.Active {
+    font-weight: 600;
+}
+
+.NavItem:hover,
+.Active:hover {
+    font-weight: 600;
+}
