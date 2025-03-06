@@ -1,5 +1,5 @@
 import { Header, Main } from '@components/layout';
-import { NavItem } from '@components/shared';
+import { Button, NavItem } from '@components/shared';
 
 export default function Landing() {
     return (
@@ -13,6 +13,10 @@ export default function Landing() {
                 <NavItem
                     href='/'
                     name='Docs'
+                />
+                <Button
+                    href='/authentication/login'
+                    name='Account'
                 />
             </Header>
             <Main />
