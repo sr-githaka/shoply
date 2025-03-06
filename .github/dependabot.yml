@@ -1,7 +1,6 @@
 version: 2
 updates:
     - package-ecosystem: 'npm'
-      directory: '/' # Location of your package.json file
+      directory: '/'
       schedule:
           interval: 'weekly'
-      package-manager: 'pnpm'
