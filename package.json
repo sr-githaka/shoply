@@ -32,9 +32,6 @@
                 "name": "production"
             },
             {
-                "name": "development"
-            },
-            {
                 "name": "alpha",
                 "prerelease": true
             },
