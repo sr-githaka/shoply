@@ -32,8 +32,7 @@
                 "name": "production"
             },
             {
-                "name": "development",
-                "prerelease": true
+                "name": "development"
             }
         ],
         "plugins": [
