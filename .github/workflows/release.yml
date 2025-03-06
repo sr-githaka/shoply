@@ -4,7 +4,8 @@ on:
     push:
         branches:
             - production
-            - development
+            - alpha
+            - beta
 
 jobs:
     release:
