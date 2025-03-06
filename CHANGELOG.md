@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/sr-githaka/shoply/compare/v1.1.0...v1.2.0) (2025-03-06)
+
+
+### Features
+
+* **layout:** update layout and global styles for consistent UI ([796c9f8](https://github.com/sr-githaka/shoply/commit/796c9f8d6998106d32e5badc39e56caa434290ff))
+
 # [1.1.0](https://github.com/sr-githaka/shoply/compare/v1.0.0...v1.1.0) (2025-03-06)
 
 
