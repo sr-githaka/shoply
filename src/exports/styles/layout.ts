@@ -3,3 +3,4 @@ export { default as MainStyles } from '@/styles/components/layout/Main.module.cs
 export { default as PageStyles } from '@/styles/components/layout/Page.module.css';
 export { default as ContainerStyles } from '@/styles/components/layout/Container.module.css';
 export { default as FooterStyles } from '@/styles/components/layout/Footer.module.css';
+export { default as NavStyles } from '@/styles/components/layout/Nav.module.css';
