@@ -4,5 +4,6 @@ export namespace Icon {
         alt: string;
         width: number;
         height: number;
+        style?: string;
     }
 }
