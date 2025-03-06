@@ -3,11 +3,15 @@ name: Release
 on:
     push:
         branches:
-            - main
+            - production
+            - development
 
 jobs:
     release:
         runs-on: ubuntu-latest
+
+        permissions:
+            contents: write
 
         steps:
             - name: Checkout repository
@@ -16,7 +20,10 @@ jobs:
             - name: Set up Node.js
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '20.8.1'
+
+            - name: Install pnpm
+              run: npm install -g pnpm
 
             - name: Install dependencies
               run: pnpm install
@@ -24,4 +31,4 @@ jobs:
             - name: Release
               run: pnpm exec semantic-release
               env:
-                  GITHUB_TOKEN: ${{ secrets.SHOPLY }}
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
