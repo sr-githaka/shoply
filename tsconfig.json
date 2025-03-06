@@ -1,27 +1,50 @@
 {
-  "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "target": "ES2017",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@components/shared": ["./src/exports/components/shared"],
+            "@components/layout": ["./src/exports/components/layout"],
+            "@components/view": ["./src/exports/components/view"],
+            "@styles/shared": ["./src/exports/styles/shared"],
+            "@styles/layout": ["./src/exports/styles/layout"],
+            "@styles/view": ["./src/exports/styles/view"],
+            "@fonts/static": ["./src/exports/fonts/static"],
+            "@fonts/dynamic": ["./src/exports/fonts/dynamic"],
+            "@lib/hooks": ["./src/exports/fonts/hooks"],
+            "@lib/handlers": ["./src/exports/fonts/handlers"],
+            "@lib/utils": ["./src/exports/fonts/utils"],
+            "@lib/middleware": ["./src/exports/fonts/middleware"],
+            "@_types/components/shared": [
+                "./src/exports/types/components/shared"
+            ],
+            "@_types/components/layout": [
+                "./src/exports/types/components/layout"
+            ],
+            "@_types/components/view": ["./src/exports/types/components/view"],
+            "@_types/lib/hooks": ["./src/exports/types/lib/hooks"],
+            "@_types/lib/handlers": ["./src/exports/types/lib/handlers"],
+            "@_types/lib/middleware": ["./src/exports/types/lib/middleware"],
+            "@_types/lib/utils": ["./src/exports/types/lib/utils"],
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "exclude": ["node_modules"]
 }
