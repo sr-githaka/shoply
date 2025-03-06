@@ -1,3 +1,7 @@
+import { ReactNode } from 'react';
+
 export namespace Page {
-    export interface Props {}
+    export interface Props {
+        children: ReactNode;
+    }
 }

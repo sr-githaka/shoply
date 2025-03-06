@@ -1,3 +1,5 @@
+import { Page } from '@components/layout';
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -5,7 +7,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body>{children}</body>
+            <Page>{children}</Page>
         </html>
     );
 }
