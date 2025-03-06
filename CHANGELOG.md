@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/sr-githaka/shoply/compare/v1.0.0...v1.1.0) (2025-03-06)
+
+
+### Features
+
+* **layout:** add Main component with types and styles ([6ad53d2](https://github.com/sr-githaka/shoply/commit/6ad53d2bc7538e03ca07520894bd9aaa02d12a60))
+* **layout:** add Page component for layout ([e3ee220](https://github.com/sr-githaka/shoply/commit/e3ee2201230751283d9c4b54a95979e4d645dd33))
+
 # 1.0.0 (2025-03-06)
 
 
