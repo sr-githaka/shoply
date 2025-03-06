@@ -33,6 +33,14 @@
             },
             {
                 "name": "development"
+            },
+            {
+                "name": "alpha",
+                "prerelease": true
+            },
+            {
+                "name": "beta",
+                "prerelease": true
             }
         ],
         "plugins": [
