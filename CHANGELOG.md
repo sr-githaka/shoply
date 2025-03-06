@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/sr-githaka/shoply/compare/v1.4.0...v1.5.0) (2025-03-06)
+
+
+### Features
+
+* **shared:** add Brand component for unified branding ([4e67356](https://github.com/sr-githaka/shoply/commit/4e67356634a317ca4af02043924a3a9e05eb56df))
+* **shared:** add Brand component for unified branding ([4d27220](https://github.com/sr-githaka/shoply/commit/4d272205f18eb3f946cbac959f311cd95295548a))
+
 # [1.4.0](https://github.com/sr-githaka/shoply/compare/v1.3.0...v1.4.0) (2025-03-06)
 
 
