@@ -2,7 +2,7 @@ name: Report a Bug
 description: Create a bug report to help us improve
 title: '[BUG] '
 labels: bug
-assignees: ''
+assignees: ['sr-githaka']
 
 body:
     - type: markdown
