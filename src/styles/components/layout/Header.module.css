@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    border-bottom: 1px solid var(--highlight-color);
+    border-bottom: 1px solid var(--neutral);
     gap: 64px;
     top: 0px;
     position: sticky;

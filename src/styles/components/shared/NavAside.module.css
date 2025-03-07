@@ -17,8 +17,8 @@
     gap: 64px;
     overflow-y: auto;
     width: 192px;
-    border-left: 1px solid var(--highlight-color);
-    background-color: var(--background-color);
+    border-left: 1px solid var(--neutral);
+    background-color: var(--background);
 }
 
 @media (min-width: 769px) {

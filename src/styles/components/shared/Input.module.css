@@ -15,21 +15,21 @@
     padding: 8px;
     font-size: 16px;
     border-radius: 10px;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--neutral);
 }
 
 .Input input:focus {
-    outline: 2px solid var(--text-color);
+    outline: 2px solid var(--neutral);
 }
 
 .Input input[type='submit'] {
     margin-top: 8px;
     font-weight: 500;
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--accent);
     padding: 8px;
     border-radius: 10px;
     transition: transform 0.5s ease;
+    border: 1px solid var(--primary);
 }
 
 .Input input[type='submit']:hover {

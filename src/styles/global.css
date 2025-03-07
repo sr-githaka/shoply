@@ -1,19 +1,23 @@
 :root {
-    --primary-color: white;
-    --secondary-color: white;
-    --accent-color: white;
-    --background-color: white;
-    --text-color: black;
-    --highlight-color: rgba(0, 0, 0, 0.05);
-    --error-color: red;
-    --warning-color: orange;
-    --success-color: green;
-    --info-color: blue;
+    /* Pallete */
+    --emerald: #06d6a0ff;
+    --eerie-black: #171d1cff;
+    --hunyadi-yellow: #f6ae2dff;
+    --seasalt: #faf9f9ff;
+    --green-blue: #0066b4ff;
+    --platinum: #dde1e4ff;
+    /**/
+    --primary: var(--eerie-black);
+    --secondary: var(--hunyadi-yellow);
+    --accent: var(--emerald);
+    --background: var(--seasalt);
+    --text: var(--eerie-black);
+    --neutral: var(--platinum);
 }
 
 * {
     padding: 0px;
     margin: 0px;
     font-size: 16px;
-    color: var(--text-color);
+    color: var(--text);
 }

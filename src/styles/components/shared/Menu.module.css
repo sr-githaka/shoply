@@ -1,0 +1,22 @@
+.Menu,
+.Head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+}
+
+.Head {
+    background-color: var(--accent);
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+    transition: transform 0.5s ease;
+}
+
+.Head:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}

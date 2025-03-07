@@ -1,6 +1,6 @@
 import { BrandTypes } from '@_types/components/shared';
 import { BrandStyles } from '@styles/shared';
-import { Logo } from '@components/shared';
+import { Logo, Menu } from '@components/shared';
 
 /**
  * **Brand Component**
@@ -19,6 +19,7 @@ import { Logo } from '@components/shared';
 export default function Brand({}: BrandTypes.Props): BrandTypes.Return {
     return (
         <div className={BrandStyles.Brand}>
+            <Menu />
             <Logo />
             <p>Shoply</p>
         </div>
