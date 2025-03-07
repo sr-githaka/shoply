@@ -21,16 +21,9 @@
     }
 }
 
-@media (min-width: 1537px) and (max-width: 2304px) {
+@media (min-width: 1537px) {
     .Page {
-        padding: 0px 128px;
-        width: calc(100vw - 256px);
-    }
-}
-
-@media (min-width: 2305px) {
-    .Page {
-        padding: 0px calc(128px + (100vw - 2305px) / 2);
-        width: calc(100vw - calc(256px + (100vw - 2305px)));
+        padding: 0px calc(64px + (100vw - 1537px) / 2);
+        width: calc(100vw - calc(128px + (100vw - 1537px)));
     }
 }
