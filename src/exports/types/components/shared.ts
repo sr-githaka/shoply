@@ -5,3 +5,4 @@ export type { NavItem as NavItemTypes } from '@/types/components/shared/NavItem'
 export type { Button as ButtonTypes } from '@/types/components/shared/Button';
 export type { NavAside as NavAsideTypes } from '@/types/components/shared/NavAside';
 export type { Form as FormTypes } from '@/types/components/shared/Form';
+export type { Input as InputTypes } from '@/types/components/shared/Input';

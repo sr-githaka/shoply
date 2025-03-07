@@ -5,3 +5,4 @@ export { default as NavItemStyles } from '@/styles/components/shared/NavItem.mod
 export { default as ButtonStyles } from '@/styles/components/shared/Button.module.css';
 export { default as NavAsideStyles } from '@/styles/components/shared/NavAside.module.css';
 export { default as FormStyles } from '@/styles/components/shared/Form.module.css';
+export { default as InputStyles } from '@/styles/components/shared/Input.module.css';
