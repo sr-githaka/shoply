@@ -5,4 +5,9 @@
     color: var(--background-color);
     padding: 8px;
     border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.Button:hover {
+    transform: scale(1.05);
 }
