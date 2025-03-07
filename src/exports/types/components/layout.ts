@@ -4,3 +4,4 @@ export type { Page as PageTypes } from '@/types/components/layout/Page';
 export type { Container as ContainerTypes } from '@/types/components/layout/Container';
 export type { Footer as FooterTypes } from '@/types/components/layout/Footer';
 export type { Nav as NavTypes } from '@/types/components/layout/Nav';
+export type { View as ViewTypes } from '@/types/components/layout/View';
