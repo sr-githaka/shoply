@@ -8,3 +8,4 @@ export { default as Form } from '@/components/shared/Form';
 export { default as Input } from '@/components/shared/Input';
 export { default as Menu } from '@/components/shared/Menu';
 export { default as Favicon } from '@/components/shared/Favicon';
+export { default as Manifest } from '@/components/shared/Manifest';

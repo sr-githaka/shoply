@@ -1,6 +1,6 @@
 import { Page } from '@components/layout';
 import '@/styles/global.css';
-import { Favicon } from '@components/shared';
+import { Favicon, Manifest } from '@components/shared';
 
 export default function RootLayout({
     children,
@@ -11,6 +11,7 @@ export default function RootLayout({
         <html lang='en'>
             <head>
                 <Favicon />
+                <Manifest />
             </head>
             <Page>{children}</Page>
         </html>

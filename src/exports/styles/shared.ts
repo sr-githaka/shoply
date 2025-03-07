@@ -8,3 +8,4 @@ export { default as FormStyles } from '@/styles/components/shared/Form.module.cs
 export { default as InputStyles } from '@/styles/components/shared/Input.module.css';
 export { default as MenuStyles } from '@/styles/components/shared/Menu.module.css';
 export { default as FaviconStyles } from '@/styles/components/shared/Favicon.module.css';
+export { default as ManifestStyles } from '@/styles/components/shared/Manifest.module.css';
