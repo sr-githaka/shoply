@@ -7,8 +7,8 @@ export default function Logo({}: LogoTypes.Props) {
         <Icon
             name='logo.svg'
             alt='The Volty logo'
-            width={32}
-            height={32}
+            width={28}
+            height={28}
             style={LogoStyles.Logo}
         />
     );
