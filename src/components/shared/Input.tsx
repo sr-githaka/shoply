@@ -1,4 +1,6 @@
 import { InputTypes } from '@_types/components/shared';
+import { workSans } from '@fonts/dynamic';
+import { InputStyles } from '@styles/shared';
 
 /**
  * **Input Component**
@@ -32,13 +34,14 @@ export default function Input({
     value,
 }: InputTypes.Props): InputTypes.Return {
     return (
-        <div>
-            <label htmlFor={id}>{label}</label>
+        <div className={InputStyles.Input}>
+            {label && <label htmlFor={id}>{label}</label>}
             <input
                 type={type}
                 placeholder={placeholder}
                 id={id}
                 value={value}
+                className={workSans.className}
             />
         </div>
     );
