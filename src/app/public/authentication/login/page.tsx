@@ -6,16 +6,16 @@ export default function Login() {
         <>
             <Header>
                 <NavItem
-                    href='/public/auth/login'
+                    href='/public/authentication/login'
                     name='Login'
                     active
                 />
                 <NavItem
-                    href='/public/auth/reset'
+                    href='/public/authentication/reset'
                     name='Register'
                 />
                 <NavItem
-                    href='/public/auth/reset'
+                    href='/public/authentication/reset'
                     name='Reset'
                 />
                 <Button
