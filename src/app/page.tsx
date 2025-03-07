@@ -15,7 +15,7 @@ export default function Landing() {
                     name='Docs'
                 />
                 <Button
-                    href='/authentication/login'
+                    href='/public/authentication/login'
                     name='Account'
                 />
             </Header>
