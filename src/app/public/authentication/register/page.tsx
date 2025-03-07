@@ -1,18 +1,18 @@
 import { Header, Main } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 
-export default function Login() {
+export default function Register() {
     return (
         <>
             <Header>
                 <NavItem
                     href='/public/authentication/login'
                     name='Login'
-                    active
                 />
                 <NavItem
                     href='/public/authentication/register'
                     name='Register'
+                    active
                 />
                 <NavItem
                     href='/public/authentication/reset'

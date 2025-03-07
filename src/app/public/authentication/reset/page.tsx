@@ -1,14 +1,13 @@
 import { Header, Main } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 
-export default function Login() {
+export default function Reset() {
     return (
         <>
             <Header>
                 <NavItem
                     href='/public/authentication/login'
                     name='Login'
-                    active
                 />
                 <NavItem
                     href='/public/authentication/register'
@@ -17,6 +16,7 @@ export default function Login() {
                 <NavItem
                     href='/public/authentication/reset'
                     name='Reset'
+                    active
                 />
                 <Button
                     href='/'
