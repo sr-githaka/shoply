@@ -10,5 +10,5 @@
     gap: 64px;
     top: 0px;
     position: sticky;
-    background-color: var(--background-color);
+    background-color: var(--background);
 }
