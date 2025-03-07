@@ -6,6 +6,7 @@
     justify-content: center;
     height: auto;
     width: auto;
+    z-index: 9999;
 }
 
 .Head {
@@ -19,4 +20,43 @@
 .Head:hover {
     cursor: pointer;
     transform: scale(1.05);
+}
+
+.Body {
+    position: absolute;
+    top: 65px;
+    height: calc(100vh - 65px);
+    right: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Container {
+    height: calc(100vh - 64px - 65px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 64px;
+    overflow-y: auto;
+    width: 192px;
+    border-right: 1px solid var(--neutral);
+    background-color: var(--background);
+}
+
+.Filler {
+    background-color: transparent;
+    flex-grow: 1;
+    height: max-content;
+    height: 100%;
+}
+
+.Filler p {
+    font-weight: 700;
 }
