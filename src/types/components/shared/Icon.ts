@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 export namespace Icon {
     export interface Props {
         name: string;
@@ -6,4 +8,6 @@ export namespace Icon {
         height: number;
         style?: string;
     }
+
+    export type Return = ReactElement;
 }
