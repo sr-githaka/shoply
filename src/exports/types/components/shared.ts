@@ -7,3 +7,4 @@ export type { NavAside as NavAsideTypes } from '@/types/components/shared/NavAsi
 export type { Form as FormTypes } from '@/types/components/shared/Form';
 export type { Input as InputTypes } from '@/types/components/shared/Input';
 export type { Menu as MenuTypes } from '@/types/components/shared/Menu';
+export type { Favicon as FaviconTypes } from '@/types/components/shared/Favicon';

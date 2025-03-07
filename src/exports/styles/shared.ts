@@ -7,3 +7,4 @@ export { default as NavAsideStyles } from '@/styles/components/shared/NavAside.m
 export { default as FormStyles } from '@/styles/components/shared/Form.module.css';
 export { default as InputStyles } from '@/styles/components/shared/Input.module.css';
 export { default as MenuStyles } from '@/styles/components/shared/Menu.module.css';
+export { default as FaviconStyles } from '@/styles/components/shared/Favicon.module.css';
