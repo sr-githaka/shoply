@@ -1,22 +1,22 @@
 import { Header, Main } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
 
-export default function Landing() {
+export default function Analytics() {
     return (
         <>
             <Header>
                 <NavItem
-                    href='/'
-                    name='Landing'
+                    href='/private/dashboards/analytics'
+                    name='Analytics'
                     active
                 />
                 <NavItem
-                    href='/'
-                    name='Docs'
+                    href='/private/dashboards/sales'
+                    name='Sales'
                 />
                 <Button
                     href='/public/authentication/login'
-                    name='Account'
+                    name='Logout'
                 />
             </Header>
             <Main>
