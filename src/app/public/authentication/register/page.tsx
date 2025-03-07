@@ -1,5 +1,6 @@
 import { Header, Main } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
+import { Authentication } from '@components/view';
 
 export default function Register() {
     return (
@@ -23,7 +24,9 @@ export default function Register() {
                     name='Landing'
                 />
             </Header>
-            <Main />
+            <Main>
+                <Authentication type='Register' />
+            </Main>
         </>
     );
 }

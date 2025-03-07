@@ -1,5 +1,6 @@
 import { Header, Main } from '@components/layout';
 import { Button, NavItem } from '@components/shared';
+import { Authentication } from '@components/view';
 
 export default function Reset() {
     return (
@@ -23,7 +24,9 @@ export default function Reset() {
                     name='Landing'
                 />
             </Header>
-            <Main />
+            <Main>
+                <Authentication type='Reset' />
+            </Main>
         </>
     );
 }

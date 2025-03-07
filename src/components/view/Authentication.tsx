@@ -1,5 +1,6 @@
 import { AuthenticationTypes } from '@_types/components/view';
 import { View } from '@components/layout';
+import { Input, Form, Logo } from '@components/shared';
 import { AuthenticationStyles } from '@styles/view';
 
 /**
@@ -26,7 +27,62 @@ export default function Authentication({
             id={type.toLowerCase()}
             styles={AuthenticationStyles.Authentication}
         >
-            <></>
+            <Logo />
+            <Form>
+                {type === 'Login' && (
+                    <>
+                        <Input
+                            type='email'
+                            id='email'
+                            label='Email'
+                            placeholder='your@email.here'
+                        />
+                        <Input
+                            type='password'
+                            id='password'
+                            label='Password'
+                            placeholder='********'
+                        />
+                    </>
+                )}
+                {type === 'Register' && (
+                    <>
+                        <Input
+                            type='email'
+                            id='email'
+                            label='Email'
+                            placeholder='your@email.here'
+                        />
+                        <Input
+                            type='password'
+                            id='password'
+                            label='Password'
+                            placeholder='********'
+                        />
+                        <Input
+                            type='password'
+                            id='confirm_password'
+                            label='Confirm Password'
+                            placeholder='********'
+                        />
+                    </>
+                )}
+
+                {type === 'Reset' && (
+                    <>
+                        <Input
+                            type='email'
+                            id='email'
+                            label='Email'
+                            placeholder='your@email.here'
+                        />
+                    </>
+                )}
+                <Input
+                    type='submit'
+                    value={type}
+                />
+            </Form>
         </View>
     );
 }
