@@ -4,7 +4,27 @@ import { NavAsideStyles } from '@styles/shared';
 import { Icon } from '@components/shared';
 import { useTrigger } from '@lib/hooks';
 
-export default function NavAside({ children }: NavAsideTypes.Props) {
+/**
+ * **NavAside Component**
+ *
+ * Renders a navigational aside element with a toggling header that controls the display of its children.
+ * The header utilizes the `useTrigger` hook to alternate between displaying a menu icon and a cancel icon.
+ * When the header is clicked, the component toggles the visibility of its body content.
+ *
+ * @param {NavAsideTypes.Props} props - Component properties.
+ * @property {ReactNode} props.children - The content to be rendered within the aside element.
+ * @returns {NavAsideTypes.Return} The rendered NavAside component.
+ *
+ * @example
+ * <NavAside>
+ *   Your NavItems here
+ * </NavAside>
+ *
+ * @see {@link @_types/components/shared}
+ */
+export default function NavAside({
+    children,
+}: NavAsideTypes.Props): NavAsideTypes.Return {
     const { trigger, pullTrigger } = useTrigger();
     return (
         <aside className={NavAsideStyles.NavAside}>
