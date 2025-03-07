@@ -27,10 +27,10 @@
             "@styles/view": ["./src/exports/styles/view"],
             "@fonts/static": ["./src/exports/fonts/static"],
             "@fonts/dynamic": ["./src/exports/fonts/dynamic"],
-            "@lib/hooks": ["./src/exports/fonts/hooks"],
-            "@lib/handlers": ["./src/exports/fonts/handlers"],
-            "@lib/utils": ["./src/exports/fonts/utils"],
-            "@lib/middleware": ["./src/exports/fonts/middleware"],
+            "@lib/hooks": ["./src/exports/lib/hooks"],
+            "@lib/handlers": ["./src/exports/lib/handlers"],
+            "@lib/utils": ["./src/exports/lib/utils"],
+            "@lib/middleware": ["./src/exports/lib/middleware"],
             "@_types/components/shared": [
                 "./src/exports/types/components/shared"
             ],
